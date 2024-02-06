@@ -1,6 +1,11 @@
-const textInput = document.getElementById('validation - input');
-const nameOutput = document.getElementById('name - output');
-
-nameInput,addEventListener('input', function() {
-    nameOutput,textContent = nameInput.value.trim  || 'Anonymous';
+const validationInput = document.getElementById('validation-input');
+validationInput.addEventListener('blur', function() {
+    const expectedLength = parseInt(validationInput.getAttribute('data-length'));
+    if (validationInput.value.length === expectedLength) {
+        validationInput.classList.remove('invalid');
+        validationInput.classList.add('valid');
+      } else {
+        validationInput.classList.remove('valid');
+        validationInput.classList.add('invalid');
+    }
 });
