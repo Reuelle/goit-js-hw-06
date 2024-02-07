@@ -8,7 +8,7 @@ const destroyButton = controls.querySelector('[data-destroy]');
 const boxesContainer = document.getElementById('boxes');
 
 createButton.addEventListener('click', Function => {
-  const amount = +controls.querySelector('input').value;
+  const amount = + controls.querySelector('input').value;
   createBoxes(amount);
 });
 
@@ -23,7 +23,7 @@ function createBoxes(amount) { destroyBoxes();
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
     boxesContainer.appendChild(box);
-    size += 10; // Increase size for the next box
+    size += 10; 
   }
 }
 
