@@ -7,7 +7,7 @@ const createButton = controls.querySelector('[data-create]');
 const destroyButton = controls.querySelector('[data-destroy]');
 const boxesContainer = document.getElementById('boxes');
 
-createButton.addEventListener('click', () => {
+createButton.addEventListener('click', Function => {
   const amount = +controls.querySelector('input').value;
   createBoxes(amount);
 });
